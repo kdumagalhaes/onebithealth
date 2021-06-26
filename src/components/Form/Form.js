@@ -51,7 +51,7 @@ const Form = () => {
                     style={styles.input}
                     onChangeText={setHeight}
                     placeholder="Ex. 1.75"
-                    keyboardType="numeric"
+                    keyboardType="numbers-and-punctuation"
                     value={height}
                 />
                 <Text style={styles.formLabel}>Peso</Text>
@@ -60,7 +60,7 @@ const Form = () => {
                     style={styles.input}
                     onChangeText={setWeight}
                     placeholder="Ex. 80"
-                    keyboardType="numeric"
+                    keyboardType="numbers-and-punctuation"
                     value={weight}
                 />
                 <TouchableOpacity
