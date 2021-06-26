@@ -3,13 +3,13 @@ import { StyleSheet, View } from 'react-native';
 
 //components
 import Title from './src/components/Title/Title'
-import Main from './src/components/Main/Main'
+import Form from './src/components/Form/Form'
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Title />
-      <Main />
+      <Form />
     </View>
   );
 }
@@ -17,8 +17,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#e0e5e5',
+    paddingTop: 80,
   },
 });
