@@ -1,11 +1,12 @@
 # OneBitHealth React Native app!
 
-### The app was developed based on the One Bit Code's React Native begginer course
+ The app was developed based on the One Bit Code's React Native begginer course
 
-![](onebithealth.gif)
+![](onebithealth.png)
 
 ## My tools:
 
+-   [x] Expo;
 -   [x] React Native;
 -   [x] Vibration API;
 -   [x] FlatList API;
