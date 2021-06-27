@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
-import { View, Text, TextInput, TouchableOpacity, Vibration } from 'react-native'
+import { 
+    View, 
+    Text, 
+    TextInput, 
+    TouchableOpacity, 
+    Vibration, 
+    Pressable, 
+    Keyboard 
+} from 'react-native'
 
 //components
 import ResultIMC from './ResultIMC/ResultIMC'
@@ -16,7 +24,10 @@ const Form = () => {
     const [textButton, setTextButton] = useState("Calcular IMC")
     const [errorMessage, setErrorMessage] = useState(null)
 
-    const IMCCalculator = () => setIMC((weight / (height * height)).toFixed(2))
+    const IMCCalculator = () => {
+        let heightFormat = height.replace(",", ".")
+        setIMC((weight / (heightFormat * heightFormat)).toFixed(2))
+    }
 
     const verificateIMC = () => {
         Vibration.vibrate()
@@ -43,7 +54,7 @@ const Form = () => {
     }
 
     return (
-        <View style={styles.formContext}>
+        <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
             <View style={styles.form}>
                 <Text style={styles.formLabel}>Altura</Text>
                 <Text style={styles.errorMessage}>{errorMessage}</Text>
@@ -51,7 +62,7 @@ const Form = () => {
                     style={styles.input}
                     onChangeText={setHeight}
                     placeholder="Ex. 1.75"
-                    keyboardType="numbers-and-punctuation"
+                    keyboardType="numeric"
                     value={height}
                 />
                 <Text style={styles.formLabel}>Peso</Text>
@@ -60,7 +71,7 @@ const Form = () => {
                     style={styles.input}
                     onChangeText={setWeight}
                     placeholder="Ex. 80"
-                    keyboardType="numbers-and-punctuation"
+                    keyboardType="numeric"
                     value={weight}
                 />
                 <TouchableOpacity
@@ -73,7 +84,7 @@ const Form = () => {
                 </TouchableOpacity>
             </View>
             <ResultIMC messageResultIMC={messageIMC} resultIMC={IMC} />
-        </View>
+        </Pressable>
     )
 }
 
