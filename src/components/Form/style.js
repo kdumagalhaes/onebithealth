@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#fff",
         marginTop: 30,
-        alignItems: "center",
         paddingTop: 30,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
@@ -22,11 +21,10 @@ const styles = StyleSheet.create({
     },
 
     input: {
-        width: "90%",
         borderRadius: 50,
         backgroundColor: "#f6f6f6",
         height: 40,
-        margin: 12,
+        margin: 15,
         paddingLeft: 10,
     },
 
@@ -34,11 +32,11 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         alignItems: "center",
         justifyContent: "center",
-        width: "90%",
         backgroundColor: "#ff0043",
         paddingTop: 14,
         paddingBottom: 14,
-        marginLeft: 12,
+        marginLeft: 15,
+        marginRight: 15,
         marginTop: 30,
     },
 
